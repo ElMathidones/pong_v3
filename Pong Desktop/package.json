@@ -1,0 +1,30 @@
+{
+  "name": "pong-v3-desktop",
+  "version": "3.0.0",
+  "description": "Versão desktop do Pong v3.0 desenvolvida com Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.mathiasmendez.pongv3",
+    "productName": "Pong v3.0",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "app/**/*"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "ball.ico"
+    }
+  }
+}
